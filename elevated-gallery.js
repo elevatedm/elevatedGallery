@@ -34,32 +34,41 @@ var renderGallery = function(){
         renderGallery.renderItems(galleryId,charterVideoUrls,charterPosterUrl);
     };
     renderGallery.writeDependencies = function(){
-        var cA_pageHead = document.getElementsByTagName('head');
-        var cA_stylesheet = document.createElement('link');
-        cA_stylesheet.type = 'text/css';
-        cA_stylesheet.rel = 'stylesheet';
-        cA_stylesheet.href = 'http://vjs.zencdn.net/5.0.0/video-js.css';
-        var cA_vjsScript = document.createElement('script');
-        cA_vjsScript.type = 'text/javascrupt';
-        cA_vjsScript.src = 'http://vjs.zencdn.net/5.0.0/video.js';
-        var cA_cmTackerScript = document.createElement('script');
-        cA_cmTackerScript.type = 'text/javascript';
-        cA_cmTackerScript.src = 'http://charterauto.tv/js/tools/CMTracker.min.js';
-        var cA_videoJsScript = document.createElement('script');
-        cA_videoJsScript.type = 'text/javascript';
-        cA_videoJsScript.src = 'http://charterauto.tv/js/tools/videojs.cm.min.js';
-        var cA_video_ga_script = document.createElement('script');
-        cA_video_ga_script.type = 'text/javascript';
-        cA_video_ga_script.src = 'http://charterauto.tv/js/tools/premiumContentLibrary/video-ga.js';
-        var cA_video_googleAnalytics = document.createElement('script');
-        cA_video_googleAnalytics.type='text/javascript';
-        var cA_video_gA_node = document.createTextNode('var _0xe9d5=["\x6F\x6E\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x73\x63\x70\x6C\x75\x73\x2D\x70\x6C\x61\x79\x65\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64"];document[_0xe9d5[2]](_0xe9d5[1])[_0xe9d5[0]]=function (){return false;} (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");');
-        document.getElementsByTagName('head')[0].appendChild(cA_video_googleAnalytics).appendChild(cA_video_gA_node);
-        document.getElementsByTagName('head')[0].appendChild(cA_stylesheet);
-        document.getElementsByTagName('head')[0].appendChild(cA_vjsScript);
-        document.getElementsByTagName('head')[0].appendChild(cA_cmTackerScript);
-        document.getElementsByTagName('head')[0].appendChild(cA_videoJsScript);
-        document.getElementsByTagName('head')[0].appendChild(cA_video_ga_script);
+        //video-js.css
+var charter_videojs_style = document.createElement('script');
+charter_videojs_style.type = 'text/css';
+charter_videojs_style.rel = 'stylesheet';
+charter_videojs_style.href = 'http://vjs.zencdn.net/5.0.0/video-js.css';
+
+///video-js.js
+var charter_videojs_script = document.createElement('script');
+charter_videojs_script.type = 'text/javascript';
+charter_videojs_script.src = 'http://vjs.zencdn.net/5.0.0/video.js';
+// tools_cmtracker.js
+var charter_tools_cmtracker = document.createElement('script');
+charter_tools_cmtracker.type = 'text/javascript';
+charter_tools_cmtracker.src = 'http://charterauto.tv/js/tools/CMTracker.min.js';
+//tools_videojs.cm
+var charter_tools_videojscm = document.createElement('script');
+charter_tools_videojscm.type = 'text/javascript';
+charter_tools_videojscm.src = 'http://charterauto.tv/js/tools/videojs.cm.min.js';
+
+//premiumContentLibary video-ga.js
+var charter_tools_videoga = document.createElement('script');
+charter_tools_videoga.type = 'text/javascript';
+charter_tools_videoga.src = 'http://charterauto.tv/js/tools/premiumContentLibrary/video-ga.js';
+
+//Google Analytics
+var charter_tracking_gAload = document.createElement('script');
+var charter_tracking_gAload_node = document.createTextNode('var _0xe9d5=["\x6F\x6E\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x73\x63\x70\x6C\x75\x73\x2D\x70\x6C\x61\x79\x65\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64"];document[_0xe9d5[2]](_0xe9d5[1])[_0xe9d5[0]]=function (){return false;} (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");');
+
+//Write links
+document.getElementsByTagName('head')[0].appendChild(charter_tracking_gAload).appendChild(charter_tracking_gAload_node);
+document.getElementsByTagName('head')[0].appendChild(charter_videojs_style);
+document.getElementsByTagName('head')[0].appendChild(charter_videojs_script);
+document.getElementsByTagName('head')[0].appendChild(charter_tools_cmtracker);
+document.getElementsByTagName('head')[0].appendChild(charter_tools_videojscm);
+document.getElementsByTagName('head')[0].appendChild(charter_tools_videoga);
         
     };
     renderGallery.renderGrid = function(galleryId){
