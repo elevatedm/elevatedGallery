@@ -48,10 +48,10 @@ var renderGallery = function(){
         var cA_videoJsScript = document.createElement('script');
         cA_videoJsScript.type = 'text/javascript';
         cA_videoJsScript.src = 'http://charterauto.tv/js/tools/videojs.cm.min.js';
-        cA_pageHead.appendChild(cA_stylesheet);
-        cA_pageHead.appendChild(cA_vjsScript);
-        cA_pageHead.appendChild(cA_cmTackerScript);
-        cA_pageHead.appendChild(cA_videoJsScript);
+        document.getElementsByTagName('head')[0].appendChild(cA_stylesheet);
+        document.getElementsByTagName('head')[0].appendChild(cA_vjsScript);
+        document.getElementsByTagName('head')[0].appendChild(cA_cmTackerScript);
+        document.getElementsByTagName('head')[0].appendChild(cA_videoJsScript);
         
     };
     renderGallery.renderGrid = function(galleryId){
