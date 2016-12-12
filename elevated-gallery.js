@@ -29,10 +29,11 @@ var renderGallery = function(){
     renderGallery.videoGallery = function(charterVideoUrls, charterPosterUrl){
         _charterGalleryCount++;
         var galleryId = 'cA_gallery' + _charterGalleryCount;
+        renderGallery.writeDependencies();
         renderGallery.renderGrid(galleryId);//renders grid to append items
         renderGallery.renderItems(galleryId,charterVideoUrls,charterPosterUrl);
     };
-    renderGallery.renderDependencies = function(){
+    renderGallery.writeDependencies = function(){
         var cA_pageHead = document.head;
         var cA_stylesheet = document.createElement('link');
         cA_stylesheet.type = 'text/css';
