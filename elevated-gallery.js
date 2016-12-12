@@ -34,7 +34,7 @@ var renderGallery = function(){
         renderGallery.renderItems(galleryId,charterVideoUrls,charterPosterUrl);
     };
     renderGallery.writeDependencies = function(){
-        var cA_pageHead = document.head;
+        var cA_pageHead = document.getElementsByTagName('head');
         var cA_stylesheet = document.createElement('link');
         cA_stylesheet.type = 'text/css';
         cA_stylesheet.rel = 'stylesheet';
