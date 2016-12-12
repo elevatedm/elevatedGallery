@@ -6,7 +6,7 @@ var createGallery = function(){
 var createGallery = function(){};
     createGallery.videoGallery = function(videoUrls, charterPosterUrl){
         createGallery.newGallery();
-        createGallery.setVideoUrl(videoUrls);
+        createGallery.setVideoUrls(videoUrls);
         renderGallery.videoGallery(charterVideoUrls, charterPosterUrl);
     };
     createGallery.setVideoUrls = function(videoUrls){
