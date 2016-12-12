@@ -51,9 +51,7 @@ var charterAutoPack = (function() {
       var videoId = videoUrl;
       var videoIndex = videoIndex;
       var galleryId = galleryId;
-      var charterAutoMixin = '<script>var myPlayer = videojs(".scplus-player-' + videoIndex + '"); var videoTitle = "Getting+Financing+With+Bad+Credit+Or+No+Credit+";</scr' + 'ipt>'
-      var gAnalytics = "<script>ga('create', 'UA-48046390-94', 'auto', {'name': 'scplusTracker'});ga('scplusTracker.require', 'displayfeatures');ga('scplusTracker.send', 'pageview');</scr" + "ipt>";
-      var videoTemplate = '<div class="charterAutoVideo">' + charterAutoMixin + gAnalytics + '<video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://video.charterauto.tv/johnnylondoffc/auto-financing.com/thumbs/KeysToSuccessfulAutoFinancing_large_16x9.jpg" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video></div>';
+      var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://video.charterauto.tv/johnnylondoffc/auto-financing.com/thumbs/KeysToSuccessfulAutoFinancing_large_16x9.jpg" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video></div>';
       var galleryWrapper = $('#' + galleryId);
       galleryWrapper.append(videoTemplate);
       console.log('items rendered');
