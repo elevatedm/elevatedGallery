@@ -56,7 +56,7 @@ var charterAutoPack = (function() {
       var videoTemplate = '<div class="charterAutoVideo">' + charterAutoMixin + gAnalytics + '<video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://video.charterauto.tv/johnnylondoffc/auto-financing.com/thumbs/KeysToSuccessfulAutoFinancing_large_16x9.jpg" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video></div>';
       var galleryWrapper = $('#' + galleryId);
       galleryWrapper.append(videoTemplate);
-      //console.log('items rendered');
+      console.log('items rendered');
     };
     return renderGallery;
   };
