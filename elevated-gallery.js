@@ -76,7 +76,7 @@ var renderGallery = function(){
       var videoIndex = videoIndex;
       var galleryId = galleryId;
       var charterPosterUrl = charterPosterUrl;
-      var charterAutoMixin = '<script>var myPlayer = videojs(".scplus-player-' + videoIndex + '"); var videoTitle = "Getting+Financing+With+Bad+Credit+Or+No+Credit+";</scr' + 'ipt><script type="text/javascript" src="//charterauto.tv/js/tools/premiumContentLibrary/video-ga.js" charset="utf-8"></scr'+'ipt>';
+      var charterAutoMixin = '<script>window.myPlayer = videojs(".scplus-player-' + videoIndex + '"); window.videoTitle = "Getting+Financing+With+Bad+Credit+Or+No+Credit+";</scr' + 'ipt><script type="text/javascript" src="//charterauto.tv/js/tools/premiumContentLibrary/video-ga.js" charset="utf-8"></scr'+'ipt>';
       var gAnalytics = "<script>ga('create', 'UA-48046390-94', 'auto', {'name': 'scplusTracker'});ga('scplusTracker.require', 'displayfeatures');ga('scplusTracker.send', 'pageview');</scr" + "ipt>";
       var videoTemplate = '<div class="charterAutoVideo">' + charterAutoMixin + gAnalytics + '<video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://video.charterauto.tv/'+charterPosterUrl+'" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video></div>';
       var galleryWrapper = $('#' + galleryId);
