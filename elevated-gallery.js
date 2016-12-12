@@ -59,7 +59,7 @@ var renderGallery = function(){
       //console.log('grid rendered');
         
     };
-    renderGallery.renderItems = function(){
+    renderGallery.renderItems = function(galleryId, charterVideoUrls){
         for (i = 0; i < charterVideoUrls.length; i++) {
         var galleryItemUrl = charterVideoUrls[i];
         var galleryItemIndex = [i];
@@ -93,3 +93,4 @@ return{
 })();
 
 
+charterAutoGallery.createGallery.videoGallery("{{@request.dealer.dealerProperties.chartervideoid1}} {{@request.dealer.dealerProperties.chartervideoid2}} {{@request.dealer.dealerProperties.chartervideoid3}} {{@request.dealer.dealerProperties.chartervideoid4}} {{@request.dealer.dealerProperties.chartervideoid5}} {{@request.dealer.dealerProperties.chartervideoid6}} {{@request.dealer.dealerProperties.chartervideoid7}} {{@request.dealer.dealerProperties.chartervideoid8}} {{@request.dealer.dealerProperties.chartervideoid9}}","{{@request.dealer.dealerProperties.charterposterurl}}");
