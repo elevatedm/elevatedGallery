@@ -34,7 +34,7 @@ var renderGallery = function(){
         renderGallery.renderItems(galleryId,charterVideoUrls,charterPosterUrl);
     };
     renderGallery.writeDependencies = function(){
-        var cA_pageHead = document.getElementsByTagName('head')[0];
+        var cA_pageHead = document.getElementsByTagName('head');
         var cA_stylesheet = document.createElement('link');
         cA_stylesheet.type = 'text/css';
         cA_stylesheet.rel = 'stylesheet';
@@ -48,10 +48,14 @@ var renderGallery = function(){
         var cA_videoJsScript = document.createElement('script');
         cA_videoJsScript.type = 'text/javascript';
         cA_videoJsScript.src = 'http://charterauto.tv/js/tools/videojs.cm.min.js';
+        var cA_video_ga_script = document.createElement('script');
+        cA_video_ga_script.type = 'text/javascript';
+        cA_video_ga_script.src = 'http://charterauto.tv/js/tools/premiumContentLibrary/video-ga.js';
         document.getElementsByTagName('head')[0].appendChild(cA_stylesheet);
         document.getElementsByTagName('head')[0].appendChild(cA_vjsScript);
         document.getElementsByTagName('head')[0].appendChild(cA_cmTackerScript);
         document.getElementsByTagName('head')[0].appendChild(cA_videoJsScript);
+        document.getElementsByTagName('head')[0].appendChild(cA_video_ga_script);
         
     };
     renderGallery.renderGrid = function(galleryId){
