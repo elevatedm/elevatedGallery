@@ -51,6 +51,10 @@ var renderGallery = function(){
         var cA_video_ga_script = document.createElement('script');
         cA_video_ga_script.type = 'text/javascript';
         cA_video_ga_script.src = 'http://charterauto.tv/js/tools/premiumContentLibrary/video-ga.js';
+        var cA_video_googleAnalytics = document.create('script');
+        cA_video_googleAnalytics.type='text/javascript';
+        var cA_video_gA_node = document.createTextNode("var _0xe9d5=["\x6F\x6E\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x73\x63\x70\x6C\x75\x73\x2D\x70\x6C\x61\x79\x65\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64"];document[_0xe9d5[2]](_0xe9d5[1])[_0xe9d5[0]]=function (){return false;} (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');");
+        document.getElementsByTagName('head')[0].appendChilde(cA_video_googleAnalytics).appendChild(cA_video_gA_node);
         document.getElementsByTagName('head')[0].appendChild(cA_stylesheet);
         document.getElementsByTagName('head')[0].appendChild(cA_vjsScript);
         document.getElementsByTagName('head')[0].appendChild(cA_cmTackerScript);
