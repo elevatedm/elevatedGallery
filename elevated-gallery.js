@@ -66,9 +66,9 @@ charter_tracking_gAinit.src = 'http://www.google-analytics.com/analytics.js';
 //Write links
 document.getElementsByTagName('head')[0].appendChild(charter_tracking_gAinit);
 //document.getElementsByTagName('head')[0].appendChild(charter_videojs_style);
-document.getElementsByTagName('head')[0].appendChild(charter_tools_videojscm);
+//document.getElementsByTagName('head')[0].appendChild(charter_tools_videojscm);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_videoga);
-document.getElementsByTagName('head')[0].appendChild(charter_videojs_script);
+//document.getElementsByTagName('head')[0].appendChild(charter_videojs_script);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_cmtracker);
 
         
