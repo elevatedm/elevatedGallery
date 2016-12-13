@@ -68,13 +68,13 @@ var charter_tracking_gAload_node = document.createTextNode('var _0xe9d5=["\x6F\x
 //Write links
 document.getElementsByTagName('head')[0].appendChild(charter_tracking_gAinit);
 //document.getElementsByTagName('head')[0].appendChild(charter_tracking_gAload).appendChild(charter_tracking_gAload_node);
-        /*
-document.getElementsByTagName('head')[0].appendChild(charter_videojs_style);
+        
+//document.getElementsByTagName('head')[0].appendChild(charter_videojs_style);
 document.getElementsByTagName('head')[0].appendChild(charter_videojs_script);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_cmtracker);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_videojscm);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_videoga);
-        */
+        
     };
     renderGallery.renderGrid = function(galleryId){
         var newGallery = '<div id="' + galleryId + '" class="cA_grid"></div>';
