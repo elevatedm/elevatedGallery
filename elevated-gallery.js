@@ -29,9 +29,9 @@ var renderGallery = function(){
     renderGallery.videoGallery = function(charterVideoUrls, charterPosterUrl){
         _charterGalleryCount++;
         var galleryId = 'cA_gallery' + _charterGalleryCount;
-        renderGallery.writeDependencies();
         renderGallery.renderGrid(galleryId);//renders grid to append items
         renderGallery.renderItems(galleryId,charterVideoUrls,charterPosterUrl);
+        renderGallery.writeDependencies();
     };
     renderGallery.writeDependencies = function(){
        //video-js.css
