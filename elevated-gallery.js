@@ -1,4 +1,4 @@
-charterAutoGallery = (function(){
+var charterAutoGallery = (function(){
 var _charterGalleryCount = 0;
 
 var createGallery = function(){
@@ -70,10 +70,11 @@ document.getElementsByTagName('head')[0].appendChild(charter_tracking_gAinit);
 //document.getElementsByTagName('head')[0].appendChild(charter_tracking_gAload).appendChild(charter_tracking_gAload_node);
         
 //document.getElementsByTagName('head')[0].appendChild(charter_videojs_style);
-document.getElementsByTagName('head')[0].appendChild(charter_videojs_script);
-document.getElementsByTagName('head')[0].appendChild(charter_tools_cmtracker);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_videojscm);
 document.getElementsByTagName('head')[0].appendChild(charter_tools_videoga);
+document.getElementsByTagName('head')[0].appendChild(charter_videojs_script);
+document.getElementsByTagName('head')[0].appendChild(charter_tools_cmtracker);
+
         
     };
     renderGallery.renderGrid = function(galleryId){
