@@ -67,7 +67,7 @@ var charterAutoGallery = (function(){
             var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" onplay="charterAutoGallery.renderGallery.videoPlay(this);" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://i.imgur.com/1szlNi8.png" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><h5>'+videoTitle+'</h5></div></div>';
             var galleryWrapper = $('#' + galleryId);
             galleryWrapper.append(videoTemplate);
-            $('.charterAutoVideo > video).css({
+            $('.charterAutoVideo > video').css({
             "background":"'+videoBgColor+'"
             })
             //console.log(galleryItem.urlProp);returns url property of item
