@@ -12,7 +12,7 @@ var charterAutoGallery = (function(){
 			_videosDetails = _videosDetails.join("");
 			_videosDetails = _videosDetails.split('^');
 			for(var i=0;i<_videosDetails.length;i++){
-				if(_videosDetails[i] == "" || _videoDetails[i] == " "){
+				if(_videosDetails[i] == ""||" "){
 				_videosDetails.pop();	
 				}else{
 				var _videoDetails = _videosDetails[i];
