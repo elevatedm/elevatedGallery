@@ -68,7 +68,7 @@ var charterAutoGallery = (function(){
             var galleryWrapper = $('#' + galleryId);
             galleryWrapper.append(videoTemplate);
             $('.charterAutoVideo > video).css({
-            "background":"'+videoBgColor+'";
+            "background":"'+videoBgColor+'"
             })
             //console.log(galleryItem.urlProp);returns url property of item
             console.log(galleryItem.poster);
