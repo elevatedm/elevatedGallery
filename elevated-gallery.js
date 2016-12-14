@@ -66,7 +66,7 @@ var charterAutoGallery = (function(){
             var gA_code = galleryItem.trackingId;
             var videoTitle = galleryItem.title;
             videoTitle = videoTitle.replace(/-/g, ' ');
-            var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://video.charterauto.tv/johnnylondoffc/auto-financing.com/thumbs/WhatIsAutoFinancing_large_16x9.jpg" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><span>'+videoTitle+'</span></div></div>';
+            var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://video.charterauto.tv/johnnylondoffc/auto-financing.com/thumbs/FinancingOptions_large_16x9.jpg" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><span>'+videoTitle+'</span></div></div>';
             var galleryWrapper = $('#' + galleryId);
             galleryWrapper.append(videoTemplate);
             //console.log(galleryItem.urlProp);returns url property of item
