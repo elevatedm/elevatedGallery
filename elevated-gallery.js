@@ -5,8 +5,7 @@ var charterAutoGallery = (function(){
 		createGallery = function(){};
         createGallery.videoGallery = function(videoDetails, videoBgColor){
             createGallery.getVideoDetails(videoDetails, videoBgColor);
-            renderGallery.videoGallery(_galleryObjects);
-            
+            renderGallery.videoGallery(_galleryObjects); 
         };
 		createGallery.getVideoDetails = function(videosDetails, videoBgColor){
             var _videosDetails = Array.from(videosDetails);
@@ -19,21 +18,17 @@ var charterAutoGallery = (function(){
 				var _videoDetails = _videosDetails[i];
 				_videoDetails = _videoDetails.split(" ");
 				var galleryVideo = new createGallery.NewVideoItem(_videoDetails, videoBgColor);
-				_galleryObjects.push(galleryVideo);
-				
+				_galleryObjects.push(galleryVideo);	
 				}
 			}
-			//console.log(_galleryObjects);
-			
-			};
+        };
 		createGallery.NewVideoItem = function(videoDetails,videoBgColor){
 				this.urlProp = videoDetails[0];
 				this.title = videoDetails[1];
                 this.bgColor = videoBgColor;
 				};
 		return createGallery;
-	};
-    
+	}; 
     var renderGallery = function(){
         renderGallery = function(){};
         renderGallery.videoGallery = function(_galleryObjects){
@@ -57,7 +52,6 @@ var charterAutoGallery = (function(){
             
         };
         renderGallery.renderVideoItem = function(galleryItem,galleryItemIndex, galleryId){
-            //define/pull gallery Item variable
             var videoId = galleryItem.urlProp;
             var videoIndex = galleryItemIndex;
             var galleryId = galleryId;
@@ -67,24 +61,15 @@ var charterAutoGallery = (function(){
             var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" onplay="charterAutoGallery.renderGallery.videoPlay(this);" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://i.imgur.com/1szlNi8.png" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><h5>'+videoTitle+'</h5></div></div>';
             var galleryWrapper = $('#' + galleryId);
             galleryWrapper.append(videoTemplate);
-            $('.charterAutoVideo > video').css(
-            "backgroundColor",videoBgColor
-            );
-            //console.log(galleryItem.urlProp);returns url property of item
-            console.log(galleryItem.bgColor);
-            console.log(videoTitle);
-		console.log(videoBgColor);
+            $('.charterAutoVideo > video').css("backgroundColor",videoBgColor);
             };
 	    renderGallery.videoPlay = function(videoScope){
         videoScope = $(videoScope);
         var _videoScopedTitle = videoScope.closest('.charterAutoVideo').find('.cA_videoTitle');
         _videoScopedTitle.fadeOut("slow");
         };
-	    
         return renderGallery;
         };
-        
-   
 	return {
 	createGallery:createGallery(),
     renderGallery:renderGallery()
