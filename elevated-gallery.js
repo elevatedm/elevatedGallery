@@ -71,8 +71,9 @@ var charterAutoGallery = (function(){
             "background":"'+videoBgColor+'"
             })
             //console.log(galleryItem.urlProp);returns url property of item
-            console.log(galleryItem.poster);
+            console.log(galleryItem.bgColor);
             console.log(videoTitle);
+		console.log(videoBgColor);
             };
 	    renderGallery.videoPlay = function(videoScope){
         videoScope = $(videoScope);
