@@ -66,7 +66,7 @@ var charterAutoGallery = (function(){
             var gA_code = galleryItem.trackingId;
             var videoTitle = galleryItem.title;
             videoTitle = videoTitle.replace(/-/g, ' ');
-            var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><span>'+videoTitle+'</span></div></div>';
+            var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://i.imgur.com/1szlNi8.png" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><span>'+videoTitle+'</span></div></div>';
             var galleryWrapper = $('#' + galleryId);
             galleryWrapper.append(videoTemplate);
             //console.log(galleryItem.urlProp);returns url property of item
