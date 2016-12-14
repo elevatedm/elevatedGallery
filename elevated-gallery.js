@@ -3,12 +3,12 @@ var charterAutoGallery = (function(){
 	var createGallery = function(){
 		var _galleryObjects = [];
 		createGallery = function(){};
-        createGallery.videoGallery = function(videoDetails, caPosterUrl, uaTracking){
-            createGallery.getVideoDetails(videoDetails, caPosterUrl, uaTracking);
+        createGallery.videoGallery = function(videoDetails, videoBgColor){
+            createGallery.getVideoDetails(videoDetails, videoBgColor);
             renderGallery.videoGallery(_galleryObjects);
             
         };
-		createGallery.getVideoDetails = function(videosDetails, caPosterUrl, uaTracking){
+		createGallery.getVideoDetails = function(videosDetails, videoBgColor){
             var _videosDetails = Array.from(videosDetails);
 			_videosDetails = _videosDetails.join("");
 			_videosDetails = _videosDetails.split('^');
@@ -18,7 +18,7 @@ var charterAutoGallery = (function(){
 				}else{
 				var _videoDetails = _videosDetails[i];
 				_videoDetails = _videoDetails.split(" ");
-				var galleryVideo = new createGallery.NewVideoItem(_videoDetails, caPosterUrl, uaTracking);
+				var galleryVideo = new createGallery.NewVideoItem(_videoDetails, videoBgColor);
 				_galleryObjects.push(galleryVideo);
 				
 				}
@@ -26,11 +26,10 @@ var charterAutoGallery = (function(){
 			//console.log(_galleryObjects);
 			
 			};
-		createGallery.NewVideoItem = function(videoDetails,caPosterUrl,uaTracking){
+		createGallery.NewVideoItem = function(videoDetails,videoBgColor){
 				this.urlProp = videoDetails[0];
 				this.title = videoDetails[1];
-                this.poster = caPosterUrl;
-                this.trackingId = uaTracking;
+                this.bgColor = videoBgColor;
 				};
 		return createGallery;
 	};
@@ -62,22 +61,24 @@ var charterAutoGallery = (function(){
             var videoId = galleryItem.urlProp;
             var videoIndex = galleryItemIndex;
             var galleryId = galleryId;
-            var videoPosterUrl = galleryItem.poster;
-            var gA_code = galleryItem.trackingId;
+            var videoBgColor = galleryItem.bgColor;
             var videoTitle = galleryItem.title;
             videoTitle = videoTitle.replace(/-/g, ' ');
             var videoTemplate = '<div class="charterAutoVideo"><video oncontextmenu="return false;" onplay="charterAutoGallery.renderGallery.videoPlay(this);" id="scplus-player-' + videoIndex + '" data-src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" class="scplus-player-' + videoIndex + ' video-js vjs-default-skin" controls="" preload="none" width="520" height="380" poster="http://i.imgur.com/1szlNi8.png" data-setup="{}"><source src="http://charterauto.tv/external/play/h/' + videoId + '/t/w/" type="video/mp4"></video><div class="cA_videoTitle"><h5>'+videoTitle+'</h5></div></div>';
             var galleryWrapper = $('#' + galleryId);
             galleryWrapper.append(videoTemplate);
+            $('.charterAutoVideo > video).css({
+            "background":"'+videoBgColor+'";
+            })
             //console.log(galleryItem.urlProp);returns url property of item
             console.log(galleryItem.poster);
             console.log(videoTitle);
-      };
+            };
 	    renderGallery.videoPlay = function(videoScope){
-videoScope = $(videoScope);
-var _videoScopedTitle = videoScope.closest('.charterAutoVideo').find('.cA_videoTitle');
-_videoScopedTitle.fadeOut("slow");
-};
+        videoScope = $(videoScope);
+        var _videoScopedTitle = videoScope.closest('.charterAutoVideo').find('.cA_videoTitle');
+        _videoScopedTitle.fadeOut("slow");
+        };
 	    
         return renderGallery;
         };
