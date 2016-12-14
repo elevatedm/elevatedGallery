@@ -73,6 +73,12 @@ var charterAutoGallery = (function(){
             console.log(galleryItem.poster);
             console.log(videoTitle);
       };
+	    renderGallery.videoPlay = function(videoScope){
+var _target = videoScope;
+var _targetTitle = _target.closest().find('.cA_videoTitle');
+console.log('video playing');
+}
+	    
         return renderGallery;
         };
         
