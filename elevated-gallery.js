@@ -75,7 +75,7 @@ var charterAutoGallery = (function(){
       };
 	    renderGallery.videoPlay = function(videoScope){
 var _target = videoScope;
-var _targetTitle = _target.closest().find('.cA_videoTitle');
+var _targetTitle = _target.closest('.charterAutoVideo').find('.cA_videoTitle');
 console.log('video playing');
 }
 	    
