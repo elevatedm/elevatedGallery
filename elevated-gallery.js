@@ -11,15 +11,14 @@ var charterAutoGallery = (function(){
             var _videosDetails = Array.from(videosDetails);
 			_videosDetails = _videosDetails.join("");
 			_videosDetails = _videosDetails.split('^');
+			_videosDetails = _videosDetails.filter(Boolean);
 			for(var i=0;i<_videosDetails.length;i++){
-				if(_videosDetails[i] == ""){
-				_videosDetails.pop();	
-				}else{
+				
 				var _videoDetails = _videosDetails[i];
 				_videoDetails = _videoDetails.split(" ");
 				var galleryVideo = new createGallery.NewVideoItem(_videoDetails, videoBgColor);
 				_galleryObjects.push(galleryVideo);	
-				}
+				
 			}
         };
 		createGallery.NewVideoItem = function(videoDetails,videoBgColor){
